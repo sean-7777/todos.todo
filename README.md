@@ -96,8 +96,10 @@ todo file = [ metadata ], [ reference section ], task block;
 
 space = [ " " ];
 nl = "\n";
-char = ? any ascii char ?;
-strict = ? any latin char upper and lower ? | ? any digit ?;
+letters = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
+nums = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+strict = letters | nums;
+chars = strict | "~" | "!" | "@" | "#" | "$" | "%" | "^" | "&" | "*" | "(" | ")" | "_" | "+" | "{" | "}" | "|" | ":" | '"' | "<" | ">" | "?" | "`" | "-" | "=" | "[" | "]" | ";" | "'" | "," | "." | "/";
 
 metadata = { meta line, nl };
 meta line = "| ", space, "=", space, { char }-;
