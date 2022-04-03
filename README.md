@@ -29,6 +29,7 @@ The date format should be: `YYYY/MM/DD`.
 ### Task
 Following the date, should be the task. The task should be a short, one-sentence summary of the task, and should not end with a period.
 
+
 ### Tags
 Tags are things that can be used to find `ctrl+f` tasks quickly. They are similar to a internet hashtag, and should be prefixed with one, such as `#shopping`.
 
