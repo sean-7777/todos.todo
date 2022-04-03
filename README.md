@@ -26,7 +26,7 @@ Across the task lines, references can be used where ever text is used. They are 
 
 
 ### Reference Section
-The reference section is a optional section used at the top of a document used to link external resources to references. It should be surrounded by `-----` (5 dashes) on their own lines. In between should be the reference section. Each reference link should first start with the name. The name and value of a reference link is seperated with a `:=` or `=`. 
+The reference section is a optional section used at the top of a document used to link external resources to references. It should be surrounded by `-----` (5 dashes) on their own lines. In between should be the reference section. Each reference link should first start with the name. The name is `pascalCase` and `strict-style`. The name and value of a reference link is seperated with a `:=` or `=`. 
 
 If `:=`, it is a reference to an set resource, such as links, webpages, user profiles, etc... The values it can contain are listed as follows[^future-more].
 - Links: Wrapped in `{}`.
@@ -92,7 +92,21 @@ WORK IN PROGRESS
 
 ## Extended Backus-Naur Grammar
 ```ebnf
-WORK IN PROGRESS
+todo file = [ metadata ], [ reference section ], task block;
+
+space = [ " " ];
+nl = "\n";
+char = ? any ascii char ?;
+strict = ? any latin char upper and lower ? | ? any digit ?;
+
+metadata = { meta line, nl };
+meta line = "| ", space, "=", space, { char }-;
+
+reference section = ref sep, nl, { ref line, nl }-, ref sep;
+ref line = { strict }-, space, (":=", space, set ref) | ("=", space, infer ref);
+set ref = ? url ? | ? email ?;
+infer ref = ;
+ref sep = "-----";
 ```
 
 
