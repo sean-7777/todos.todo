@@ -13,7 +13,30 @@ Todos should be stored in a folder, `~\todos` preferably. Each file should repre
 
 
 
-## Task Line Syntax
+## Metadata
+Each list can contain metadata. Each line of metadata is prefixed with `|`, and the name and value are seperated with a `=`. Example: `| author = john doe`. Names are `strict-style` and are `pascalCase`. Values are Markdown and can be multiline if a `$` is used, the value will be on the next lines with a four space indention. Common names:
+- `author`
+- `description`
+- `importance`
+
+
+
+## References
+Across the task lines, references can be used where ever text is used. They are prefixed with a `@` and should contain the reference ID. The reference id should be `kebab-case`, and strict-style with dashes. References are not only limited to tasks, they can also reference external resources by defining a reference section at the top.
+
+
+### Reference Section
+The reference section is a optional section used at the top of a document used to link external resources to references. It should be surrounded by `-----` (5 dashes) on their own lines. In between should be the reference section. Each reference link should first start with the name. The name and value of a reference link is seperated with a `:=` or `=`. 
+
+If `:=`, it is a reference to an set resource, such as links, webpages, user profiles, etc... The values it can contain are listed as follows[^future-more].
+- Links: Wrapped in `{}`.
+- Emails: Wrapped in `<>`. Can contain a name by adding another `<>`, like `<johndoe@example.com><John Doe>`.
+
+If `=`, then it is a reference to a inferred resource, which is a plain text string, which could be things like names and books, but without any specific link. With inferred resources, the value should be wrapped in `""`.
+
+
+
+## Task Block
 Each task line is divided into sections, some optional. They are all seperated by a space.
 
 ### Project
@@ -51,32 +74,36 @@ Following the date, should be the task. The task should be a short, one-sentence
 Tags are things that can be used to `Ctrl+F` tasks quickly. They are similar to a internet hashtag, and should be prefixed with one, such as `#shopping`. They should use `flatcase` and `strict-style`.
 
 
+### Metadata
+Aditional metadata not provided by the optional sections can be included here. They are seperated with a `:`, ex. `people:john,max`. The names are `strict-style` and are `pascalCase`. The values are `strict-style` with these characters: `,_~-`.
+
+
 ### Description
 Another optional section, and is used when a task needs more instructions than provided with the task section. The task line should end with a `$` to notate that a description is provided, and the description should be provided on a indented new line(s). The indention should be four spaces. Markdown is available here also.
 
 
 
-## References
-Across the task lines, references can be used where ever text is used. They are prefixed with a `@` and should contain the reference ID. The reference id should be `kebab-case`, and strict-style with dashes. References are not only limited to tasks, they can also reference external resources by defining a reference section at the top.
-
-
-### Reference Section
-The reference section is a optional section used at the top of a document used to link external resources to references. It should be surrounded by `-----` (5 dashes) on their own lines. In between should be the reference section. Each reference link should first start with the name. The name and value of a reference link is seperated with a `:=` or `=`. 
-
-If `:=`, it is a reference to an set resource, such as links, webpages, user profiles, etc... The values it can contain are listed as follows[^future-more].
-- Links: Wrapped in `{}`.
-- Emails: Wrapped in `<>`. Can contain a name by adding another `<>`, like `<johndoe@example.com><John Doe>`.
-
-If `=`, then it is a reference to a inferred resource, which is a plain text string, which could be things like names and books, but without any specific link. With inferred resources, the value should be wrapped in `""`.
-
-
-
-
 ## An example
 ```
-
+To be written.
 ```
 
+
+
+## Terminology
+These are definitions for terms used throughout the document.
+
+#### `strict-style`
+> This is a term used for naming purposes. Something that is `strict-style` only has numbers 0-9, and the latin alphabet (uppercase and lowercase). If something is said to be `strict-style` with something, that something is also included in the limited set of characters allowed.
+#### `reference`
+> Section: The block where references are contained.
+> Link: A line in the reference section
+#### `resource`
+> Inferred: A plain text resource.
+> Set: A resource with a pointing value.
+#### `Task`
+> Line: A line in the task block.
+> Block: The majority section of the document, where tasks are defined.
 
 
 
