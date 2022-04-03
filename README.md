@@ -1,5 +1,5 @@
 # Todos.todo
-The [todo.txt format](https://github.com/todotxt/todo.txt) is great, but it has it's issues for me. This document aims to provide a extended form of the todo.txt format. Like the original, it is also purely plain ASCII text.
+The [todo.txt format](https://github.com/todotxt/todo.txt) is great, but it has some missing features. This document aims to provide a extended and more detailed form of the todo.txt format. Like the original, it is also purely plain ASCII text.
 
 
 ## Location
