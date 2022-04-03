@@ -105,7 +105,7 @@ meta line = "| ", space, "=", space, { char }-;
 reference section = ref sep, nl, { ref line, nl }-, ref sep;
 ref line = { strict }-, space, (":=", space, set ref) | ("=", space, infer ref);
 set ref = ? url ? | ? email ?;
-infer ref = ;
+infer ref = '"', { char }, '"';
 ref sep = "-----";
 ```
 
