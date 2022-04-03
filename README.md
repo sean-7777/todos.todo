@@ -3,16 +3,8 @@ The [todo.txt format](https://github.com/todotxt/todo.txt) is great, but it has 
 
 
 
-
-## `strict-style`
-This is a term used throughout the document used for naming purposes. Something that is `strict-style` only has numbers 0-9, and the latin alphabet (uppercase and lowercase). If something is said to be `strict-style` with something, that something is also included in the limited set of characters allowed.
-
-
-
-
 ## Wrapping
 When a value is being wrapped, ex. in `{}`, it cannot contain any of it's wrapping characters, ex. `{` and `}`[^future-add].
-
 
 
 
@@ -21,10 +13,8 @@ Todos should be stored in a folder, `~\todos` preferably. Each file should repre
 
 
 
-
 ## Task Line Syntax
 Each task line is divided into sections, some optional. They are all seperated by a space.
-
 
 ### Project
 This is an optional section, and allows the list to be split into several smaller sections. The project name should be `PascalCased`, and be wrapped with `{}`, like `{MyProject}` and `strict-style`.
@@ -63,7 +53,6 @@ Tags are things that can be used to `Ctrl+F` tasks quickly. They are similar to 
 
 ### Description
 Another optional section, and is used when a task needs more instructions than provided with the task section. The task line should end with a `$` to notate that a description is provided, and the description should be provided on a indented new line(s). The indention should be four spaces. Markdown is available here also.
-
 
 
 
