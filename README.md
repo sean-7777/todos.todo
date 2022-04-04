@@ -57,9 +57,9 @@ The priority of the task should be put after the status, in `()`. The priority l
 ### Date
 After the priority should be the date. Only the completion date is required.
 ```
-<creationdate -- enddate | duedate>
+<creationdate -- completiondate | duedate>
 ```
-The date format should be: `YYYY/MM/DD`.
+The date format should be: `YYYY/MM/DD`. If the task is not yet completed, the completion date should be `*`.
 
 
 ### Reference
