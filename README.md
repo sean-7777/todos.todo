@@ -109,6 +109,8 @@ ref line = { strict }-, space, (":=", space, set ref) | ("=", space, infer ref);
 set ref = ? url ? | ? email ?;
 infer ref = '"', { char }, '"';
 ref sep = "-----";
+
+url = "http", { "s" }, "://", strict, { strict | "-" }, [ ":", nums ], { "/", letters | nums | "-" | "." | "_" | "~" | "!" | "$" | "&" | "'" | "(" | ")"\             | "*" | "+" | "," | ";" | "=" }, [ "?", { chars }-, "=", { chars-"&" }- ], [ "#", { chars }- ];
 ```
 
 
